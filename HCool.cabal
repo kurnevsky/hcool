@@ -1,0 +1,22 @@
+name:           HCool
+version:        0.1
+cabal-version:  >= 1.2
+build-type:     Simple
+author:         kurnevsky
+
+executable HCool
+  hs-source-dirs:  src
+  main-is:         Main.hs
+  build-depends:
+                   base >= 4,
+                   parsec,
+                   containers,
+                   process,
+                   directory
+  ghc-options:     -Wall -O2 -threaded -rtsopts
+  other-modules:   
+                   Semantics,
+                   Syntax,
+                   CodeGeneration,
+                   CIL
+
